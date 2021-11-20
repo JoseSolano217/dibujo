@@ -3,6 +3,25 @@ body{
     margin: 10px 10px;
 
 }
+@keyframes blink {
+	from {clip-path: ellipse(50% 50% at 50% 50%);}
+	to {clip-path: ellipse(50% 1% at 50% 50%);}
+}
+.eye {
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	background-image: url(assets/shine.jpg);
+	background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+	clip-path: ellipse(50% 50% at 50% 50%);
+	animation-name: blink;
+	animation-duration: 200ms;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
 .padre{
     display: flex;
     justify-content: center;
